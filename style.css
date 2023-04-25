@@ -1,0 +1,127 @@
+body{
+	background-color: #DDD;
+
+	font-family: 'Open Sans', sans-serif;
+	font-size: 10pt;
+}
+
+#wrapper{
+	width: 800px;
+	margin: auto;
+	padding: 40px;
+	box-sizing: border-box;
+
+	background-color: white;
+	overflow: hidden;
+}
+
+#card{
+	width: 550px;
+	box-sizing: border-box;
+	margin: auto; /*horizontally centered*/
+	overflow: hidden;
+	border-style: solid;
+}
+
+#card-text{
+	width: 380px;
+	height: 216px;
+	box-sizing: border-box;
+
+	display: block;
+	float: left;
+	padding: 8pt;
+
+	/*background-color: red;*/
+
+	text-align: justify;
+}
+
+#card-contacts{
+	margin-top: -10pt;
+	margin-bottom: 10pt;
+
+	color: #444;
+	font-weight: 600;
+}
+
+#card-imgdiv{
+	box-sizing: border-box;
+	display: block;
+	float: left;
+	width: 160px;
+	height: 216px;
+
+	/*background-color: blue;*/
+}
+
+#card-img{
+	width: 150px;
+	height: auto;
+
+	margin-left: 8px;
+  	position: relative;
+  	top: 50%;
+  	-webkit-transform: translateY(-50%);
+  	-ms-transform: translateY(-50%);
+  	transform: translateY(-50%);
+}
+
+#CV{
+	margin-top: 40px;
+
+	text-align: center;
+}
+
+.cvtbl{
+	text-align: left;
+}
+
+.cvrow{
+	display: table-row;
+	line-height: 14pt;
+}
+
+.cvcell-edu{
+	display: table-cell;
+
+	text-align: right;
+}
+
+.cvcell-sem{
+	display: table-cell;
+
+	padding-left: 2pt;
+	padding-right: 2pt;
+
+	text-align: right;
+}
+
+.cvcell-sep{
+	display: table-cell;
+
+	padding-left: 3pt;
+	padding-right: 3pt;
+
+	text-align: center;
+	font-size: 15pt;
+}
+
+.cvcell-job{
+	display: table-cell;
+
+	padding-left: 3pt;
+}
+
+
+#pub{
+	margin-top: 40px;
+}
+
+#notes{
+	margin-top: 40px;
+}
+
+#interests{
+	margin-top: 40px;
+}
