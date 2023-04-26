@@ -91,10 +91,11 @@ body{
 .cvcell-sem{
 	display: table-cell;
 
-	padding-left: 2pt;
+	padding-left: 5pt;
 	padding-right: 2pt;
 
 	text-align: right;
+	font-family: monospace;
 }
 
 .cvcell-sep{
