@@ -6,9 +6,9 @@ body{
 }
 
 #wrapper{
-	width: 800px;
+	width: 900px;
 	margin: auto;
-	padding: 40px;
+	padding: 50px;
 	box-sizing: border-box;
 
 	background-color: white;
@@ -75,6 +75,8 @@ body{
 
 .cvtbl{
 	text-align: left;
+	margin: auto;
+	width: fit-content;
 }
 
 .cvrow{
@@ -90,6 +92,7 @@ body{
 
 .cvcell-sem{
 	display: table-cell;
+	width: fit-content;
 
 	padding-left: 5pt;
 	padding-right: 2pt;
@@ -100,6 +103,7 @@ body{
 
 .cvcell-sep{
 	display: table-cell;
+	width: fit-content;
 
 	padding-left: 3pt;
 	padding-right: 3pt;
