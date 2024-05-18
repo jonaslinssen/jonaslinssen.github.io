@@ -1,0 +1,133 @@
+body{
+	background-color: #DDD;
+
+	font-family: 'Courier Prime Regular', monospace;
+	font-size: 16px;/*min(calc(1vmin + 1vmax),100px);*/
+}
+
+/*@media screen and (min-width:1000px){
+	body{
+		font-size: 16px;
+	}
+}*/
+
+a{
+	text-decoration: none;
+	color: #007700;
+}
+
+hr{
+	height: 1.5px;
+	background-color: #AAA;
+	border: none;
+	margin-bottom: 5px;
+}
+
+h3{
+	font-size: 20px;
+	text-align: center;
+}
+
+#wrapper{
+	width: 600px;
+	margin: auto;
+	padding: 40px;
+	/*box-sizing: border-box;*/
+
+	background-color: white;
+	overflow: hidden;
+
+	box-shadow: 5px 5px 5px lightgray;
+}
+
+#card{
+	text-align: center;
+}
+
+#contact{
+	margin-bottom: 1em;
+}
+
+#about{
+	padding-top: 1em;
+	text-align: justify;
+}
+
+#navbar{
+	display: block;
+	padding-bottom: 1em;
+	padding-top:1em;
+	margin-top: 2em;
+	
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+}
+
+#timelines{
+
+}
+
+#CV{
+
+}
+
+#Teaching{
+
+}
+
+#Conferences{
+	text-align: center;
+}
+
+#Publications{
+	margin-top: 3em;
+	text-align: center;
+}
+
+#notes{
+	margin-top: 3em;
+	text-align: justify;
+}
+
+#questions{
+	text-align: justify;
+	margin-top: 3em;
+}
+
+
+.btn{
+	display: inline-block;
+}
+
+.btn:hover{
+	color: darkgray;
+}
+
+
+
+.timeline{
+	margin: auto;
+	display: table;
+}
+
+.timeline-row{
+	display: table-row;
+}
+
+.timeline-arrow{
+	display: table-cell;
+	padding-right: 8px;
+	font-size: 14pt;
+}
+
+.timeline-semester{
+	display: table-cell;
+	text-align: left;
+}
+
+.timeline-cell{
+	display: table-cell;
+	padding-left: 8px;
+	text-align: left;
+}
