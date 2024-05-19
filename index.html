@@ -3,14 +3,34 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+	
+	<!-- meta viewport? -->
 
 	<link rel="stylesheet" type="text/css" href="style.css">
 
-	
+	<title>Jonas Linssen</title>
+
+	<script type="text/javascript">
+		function showTimeline(name){
+			console.log("pressed " + name);
+
+			document.getElementById('CV').style.display = 'none';
+			document.getElementById('CV-btn').style.textDecoration = 'none';
+
+			document.getElementById('Teaching').style.display = 'none';
+			document.getElementById('Teaching-btn').style.textDecoration = 'none';
+
+			// document.getElementById('Publications').style.display = 'none';
+			// document.getElementById('Publications-btn').style.textDecoration = 'none';
+
+			document.getElementById('Conferences').style.display = 'none';
+			document.getElementById('Conferences-btn').style.textDecoration = 'none';
+
+			document.getElementById(name).style.display = 'block';
+			document.getElementById(name+'-btn').style.textDecoration = 'underline';
+		}
+	</script>
+
 	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 	<script>
 		MathJax = {
@@ -23,238 +43,319 @@
 		};
 	</script>
 	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
-
-	<title>Jonas Linssen</title>
 </head>
 <body>
 	<div id="wrapper">
 		<div id="card">
-			<div id="card-text">
-				<h2>Jonas Linssen</h2>
-				<div id="card-contacts">
-					Room 429 Geomatikum, University of Hamburg<br>
-					jonas.linssen * uni-hamburg.de
-				</div>
-				<div id="card-description">
-					I am a PhD-student of <a href="https://www.math.uni-hamburg.de/home/richter/index.html">Prof. Dr. Birgit Richter</a>.
-					My interests are <i>Category Theory,
-					Algebra, Homotopy Theory</i>
-					and their joint generalization in the form of <i>Higher Algebra</i>.
-				</div>
+			<img src="profileimg-round.jpg" width="200px" style="margin: auto;">
+			<h2>Jonas Linssen</h2>
+
+			<div id="contact">
+				<a href="">jonas.linssen'at'uni-hamburg.de</a><br>
+				Room 429 Geomatikum, Hamburg, Germany
 			</div>
-			<div id="card-imgdiv">
-				<img id="card-img" src="profileimg-round.jpg">
+			<div id="about">
+				I am a PhD-student of <a href="https://www.math.uni-hamburg.de/home/richter/index.html">Prof. Dr. Birgit Richter</a>.
+				My main interests are <i>Category Theory, Algebra, Homotopy Theory</i> and their joint generalization in the form of <i>Higher Algebra</i>. 
+				My PhD-project is concerned with obstruction theories for multiplicative structures on spectra by means of filtrations of operads.
 			</div>
 		</div>
-		<div id="pub" style="text-align:center;">
-			<h2 style="text-align:center;">Publications</h2>
-
-			I have not published anything yet. You will soon find some unpublished notes below.
+		<div id="navbar">
+			<div id="CV-btn" class="btn" style="text-decoration: underline;" onclick="showTimeline('CV');">CV</div>
+			<div id="Teaching-btn" class="btn" onclick="showTimeline('Teaching');">Teaching</div>
+			<div id="Conferences-btn" class="btn" onclick="showTimeline('Conferences');">Travels</div>
+			<!--<div id="Publications-btn" class="btn" style="color: lightgray;" onclick="showTimeline('Publications');">Publications</div>-->
 		</div>
-		<div id="CV">
-			<h2>Curriculum Vitae</h2>
-
-			<div class="cvtbl">
-				<div class="cvrow">
-					<div class="cvcell-edu"><b>EDUCATION</b></div>
-					<div class="cvcell-sem"></div>
-					<div class="cvcell-sep">&#9650</div>
-					<div class="cvcell-sem"></div>
-					<div class="cvcell-job"><b>TEACHING</b> (exercise classes)</div>
-				</div>
-				<div class="cvrow">
-					<div class="cvcell-edu">
-						<b style="color:#AAA;">------------------------------------------------------------------------</b><br>
-						University of Hamburg, Germany<br>
-						PhD studies<br>
-						<b style="color:#AAA;">------------------------------------------------------------------------</b>
+		<div id="timelines">
+			<div id="CV" style="display: block;">
+				<!-- CV ❄ ☀ ▲ ┃ ┣ -->
+				<div class="timeline">
+					<div class="timeline-row">
+						<div class="timeline-arrow">▲</div>
 					</div>
-					<div class="cvcell-sem">
-						NOW<br>
-						<br>
-						<br>
-						&#9728 2023
+					<div class="timeline-row">
+						<div class="timeline-arrow">┣</div>
+						<div class="timeline-semester">&nbspnow</div>
+						<div class="timeline-cell"><hr></div>
 					</div>
-					<div class="cvcell-sep">
-						&#9515<br>
-						&#9507<br>
-						&#9507<br>
-						&#9547
+					<div class="timeline-row">
+						<div class="timeline-arrow">┃</div>
+						<div class="timeline-semester"></div>
+						<div class="timeline-cell">University of Hamburg, Germany</div>
 					</div>
-					<div class="cvcell-sem">
-						<br>
-						&#9728 2024<br>
-						&#10052 2023<br>
-						&#9728 2023
+					<div class="timeline-row">
+						<div class="timeline-arrow">┃</div>
+						<div class="timeline-semester"></div>
+						<div class="timeline-cell">PhD studies</div>
 					</div>
-					<div class="cvcell-job">
-						<br>
-						Complex Analysis<br>
-						Calculus I<br>
-						Math for Physicists IV
+					<div class="timeline-row">
+						<div class="timeline-arrow">┣</div>
+						<div class="timeline-cell">☀&nbsp2023</div>
+						<div class="timeline-cell"><hr></div>
 					</div>
-				</div>
-				<div class="cvrow">
-					<div class="cvcell-edu">
-						<b style="color:#AAA;">------------------------------------------------------------------------</b><br>
-						University of Regensburg, Germany<br>
-						Mathematics M.Sc.<br>
-						<a href="docs/master.pdf">The Homotopy 2-Category of a Stable ∞-Category</a><br>
-						<br>
-						<br>
-						<b style="color:#AAA;">------------------------------------------------------------------------</b>
+					<div class="timeline-row">
+						<div class="timeline-arrow">┣</div>
+						<div class="timeline-cell">❄&nbsp2022</div>
+						<div class="timeline-cell"><hr></div>
 					</div>
-					<div class="cvcell-sem">
-						&#10052 2022<br>
-						<br>
-						<br>
-						<br>
-						<br>
-						<br>
-						&#10052 2019
+					<div class="timeline-row">
+						<div class="timeline-arrow">┃</div>
+						<div class="timeline-semester"></div>
+						<div class="timeline-cell">University of Regensburg, Germany</div>
 					</div>
-					<div class="cvcell-sep">
-						&#9547<br>
-						&#9507<br>
-						&#9507<br>
-						&#9507<br>
-						&#9507<br>
-						&#9507<br>
-						&#9515
+					<div class="timeline-row">
+						<div class="timeline-arrow">┃</div>
+						<div class="timeline-semester"></div>
+						<div class="timeline-cell">Mathematics M.Sc.</div>
 					</div>
-					<div class="cvcell-sem">
-						&#10052 2022<br>
-						&#9728 2022<br>
-						&#10052 2021<br>
-						&#9728 2021<br>
-						&#10052 2020<br>
-						&#9728 2020
+					<div class="timeline-row">
+						<div class="timeline-arrow">┃</div>
+						<div class="timeline-semester"></div>
+						<div class="timeline-cell"><a href="docs/master.pdf">The Homotopy 2-Category of a Stable ∞-Category</a></div>
 					</div>
-					<div class="cvcell-job">
-						Algebra<br>
-						Commutative Algebra<br>
-						Algebra<br>
-						Linear Algebra<br>
-						Linear Algebra<br>
-						Linear Algebra
+					<div class="timeline-row">
+						<div class="timeline-arrow">┣</div>
+						<div class="timeline-cell">❄&nbsp2019</div>
+						<div class="timeline-cell"><hr></div>
 					</div>
-				</div>
-				<div class="cvrow">
-					<div class="cvcell-edu">
-						<b style="color:#AAA;">------------------------------------------------------------------------</b><br>
-						Karlsruhe Institute of Technology, Germany<br>
-						Mathematics B.Sc. + Computer Science B.Sc.<br>
-						<a href="docs/bachelor.pdf">Turing Categories - Computability and Complexity</a><br>
-						<b style="color:#AAA;">------------------------------------------------------------------------</b>
+					<div class="timeline-row">
+						<div class="timeline-arrow">┣</div>
+						<div class="timeline-cell">☀&nbsp2019</div>
+						<div class="timeline-cell"><hr></div>
 					</div>
-					<div class="cvcell-sem">
-						&#9728 2019<br>
-						<br>
-						<br>
-						<br>
-						&#10052 2015
+					<div class="timeline-row">
+						<div class="timeline-arrow">┃</div>
+						<div class="timeline-semester"></div>
+						<div class="timeline-cell">Karlsruhe Institute of Technology, Germany</div>
 					</div>
-					<div class="cvcell-sep">
-						&#9515<br>
-						&#9507<br>
-						&#9507<br>
-						&#9475<br>
-						&#9515
+					<div class="timeline-row">
+						<div class="timeline-arrow">┃</div>
+						<div class="timeline-semester"></div>
+						<div class="timeline-cell">Mathematics B.Sc. + Computer Science B.Sc.</div>
 					</div>
-					<div class="cvcell-sem">
-						<br>
-						&#9728 2018<br>
-						&#10052 2017<br>
+					<div class="timeline-row">
+						<div class="timeline-arrow">┃</div>
+						<div class="timeline-semester"></div>
+						<div class="timeline-cell"><a href="docs/bachelor.pdf">Turing Categories - Computability and Complexity</a></div>
 					</div>
-					<div class="cvcell-job">
-						<br>
-						Intro to Algebra and Number Theory<br>
-						Linear Algebra
+					<div class="timeline-row">
+						<div class="timeline-arrow">┣</div>
+						<div class="timeline-cell">❄&nbsp2015</div>
+						<div class="timeline-cell"><hr></div>
 					</div>
-				</div>
-				<div class="cvrow">
-					<div class="cvcell-edu">
-						<b style="color:#AAA;">------------------------------------------------------------------------</b><br>
-						Quirinus Gymnasium Neuss, Germany<br>
-						Abitur<br>
-						Jugend Aktiv eV. scholarship<br>
-						<b style="color:#AAA;">------------------------------------------------------------------------</b>
+					<div class="timeline-row">
+						<div class="timeline-arrow">┣</div>
+						<div class="timeline-cell">☀&nbsp2015</div>
+						<div class="timeline-cell"><hr></div>
 					</div>
-					<div class="cvcell-sem">
-						&#9728 2015<br>
-						<br>
-						<br>
-						<br>
-						&#10052 2007
+					<div class="timeline-row">
+						<div class="timeline-arrow">┃</div>
+						<div class="timeline-semester"></div>
+						<div class="timeline-cell">Quirinus Gymnasium Neuss, Germany</div>
 					</div>
-					<div class="cvcell-sep">
-						&#9515<br>
-						&#9475<br>
-						&#9475<br>
-						&#9475<br>
-						&#9515
+					<div class="timeline-row">
+						<div class="timeline-arrow">┃</div>
+						<div class="timeline-semester"></div>
+						<div class="timeline-cell">Abitur</div>
 					</div>
-					<div class="cvcell-sem">
-						
+					<div class="timeline-row">
+						<div class="timeline-arrow">┃</div>
+						<div class="timeline-semester"></div>
+						<div class="timeline-cell">Jugend Aktiv eV. Scholarship</div>
 					</div>
-					<div class="cvcell-job">
-						
+					<div class="timeline-row">
+						<div class="timeline-arrow">┣</div>
+						<div class="timeline-cell">❄&nbsp2007</div>
+						<div class="timeline-cell"><hr></div>
 					</div>
 				</div>
 			</div>
-		</div>
-		<div id="notes">
-			<h2 style="text-align:center;">Mathematical Writing</h2>
+			<div id="Teaching" style="display: none;">
+				<div style="text-align:center;">I gave exercise classes for the following classes.</div><br>
+				<div class="timeline">
+					<div class="timeline-row">
+						<div class="timeline-arrow">▲</div>
+					</div>
+					<div class="timeline-row">
+						<div class="timeline-arrow">┃</div>
+						<div class="timeline-semester"></div>
+						<div class="timeline-cell" style="color:gray;">Hamburg</div>
+					</div>
+					<div class="timeline-row">
+						<div class="timeline-arrow">┣</div>
+						<div class="timeline-semester">☀&nbsp2024</div>
+						<div class="timeline-cell">Complex Analysis</div>
+					</div>
+					<div class="timeline-row">
+						<div class="timeline-arrow">┣</div>
+						<div class="timeline-semester">❄&nbsp2023</div>
+						<div class="timeline-cell">Real Analysis I</div>
+					</div>
+					<div class="timeline-row">
+						<div class="timeline-arrow">┣</div>
+						<div class="timeline-semester">☀&nbsp2023</div>
+						<div class="timeline-cell">Math for Physicists IV</div>
+					</div>
+					<div class="timeline-row">
+						<div class="timeline-arrow">┃</div>
+						<div class="timeline-semester"></div>
+						<div class="timeline-cell"></div>
+					</div>
+					<div class="timeline-row">
+						<div class="timeline-arrow">┃</div>
+						<div class="timeline-semester"></div>
+						<div class="timeline-cell" style="color:gray;">Regensburg</div>
+					</div>
+					<div class="timeline-row">
+						<div class="timeline-arrow">┣</div>
+						<div class="timeline-semester">❄&nbsp2022</div>
+						<div class="timeline-cell">Algebra</div>
+					</div>
+					<div class="timeline-row">
+						<div class="timeline-arrow">┣</div>
+						<div class="timeline-semester">☀&nbsp2022</div>
+						<div class="timeline-cell">Commutative Algebra</div>
+					</div>
+					<div class="timeline-row">
+						<div class="timeline-arrow">┣</div>
+						<div class="timeline-semester">❄&nbsp2021</div>
+						<div class="timeline-cell">Algebra</div>
+					</div>
+					<div class="timeline-row">
+						<div class="timeline-arrow">┣</div>
+						<div class="timeline-semester">☀&nbsp2021</div>
+						<div class="timeline-cell">Linear Algebra II</div>
+					</div>
+					<div class="timeline-row">
+						<div class="timeline-arrow">┣</div>
+						<div class="timeline-semester">❄&nbsp2020</div>
+						<div class="timeline-cell">Linear Algebra I</div>
+					</div>
+					<div class="timeline-row">
+						<div class="timeline-arrow">┣</div>
+						<div class="timeline-semester">☀&nbsp2020</div>
+						<div class="timeline-cell">Linear Algebra II</div>
+					</div>
+					<div class="timeline-row">
+						<div class="timeline-arrow">┃</div>
+						<div class="timeline-semester"></div>
+						<div class="timeline-cell"></div>
+					</div>
+					<div class="timeline-row">
+						<div class="timeline-arrow">┃</div>
+						<div class="timeline-semester"></div>
+						<div class="timeline-cell" style="color:gray;">Karlsruhe</div>
+					</div>
+					<div class="timeline-row">
+						<div class="timeline-arrow">┣</div>
+						<div class="timeline-semester">☀&nbsp2018</div>
+						<div class="timeline-cell">Intro to Algebra and Number Theory</div>
+					</div>
+					<div class="timeline-row">
+						<div class="timeline-arrow">┣</div>
+						<div class="timeline-semester">❄&nbsp2017</div>
+						<div class="timeline-cell">Linear Algebra I</div>
+					</div>
+				</div>
+			</div>
+			<div id="Conferences" style="display: none;">
+				We might have met during the following conferences or workshops:
 
-			All of the following notes are unpublished and I take full credit for any mistakes. I will be very happy about constructive feedback via my email adress above.
-			<ul>
-				<li><a href="docs/master.pdf">Master Thesis</a></li>
-				<li><a href="docs/bachelor.pdf">Bachelor Thesis</a></li>
-			</ul>
+				<div class="timeline">
+					<div class="timeline-row">
+						<div class="timeline-arrow">▲</div>
+						<div class="timeline-cell">2024</div>
+					</div>
+					<div class="timeline-row">
+						<div class="timeline-arrow">┣</div>
+						<div class="timeline-cell"><a href="https://www.uni-muenster.de/MathematicsMuenster/events/2024/YTM.shtml">Young Topologists Meeting</a>, Münster</div>
+					</div>
+					<div class="timeline-row">
+						<div class="timeline-arrow">┣</div>
+						<div class="timeline-cell"><a href="https://sites.google.com/view/european-talbot/2024-workshop">European Talbot Workshop</a></div>
+					</div>
+					<div class="timeline-row">
+						<div class="timeline-arrow">┃</div>
+						<div class="timeline-cell">Operads in Deformation Theory and Higher Algebra, Schleiden</div>
+					</div>
+					<div class="timeline-row">
+						<div class="timeline-arrow">┣</div>
+						<div class="timeline-cell"><a href="https://sfb-higher-invariants.app.uni-regensburg.de/index.php?title=Page_Interactions_between_algebra_equivariance_and_homotopy_theory_Summer_School">Interactions b/w Algebra, Equivariance and Homotopy Theory</a>,</div>
+					</div>
+					<div class="timeline-row">
+						<div class="timeline-arrow">┃</div>
+						<div class="timeline-cell">Summer School, Regensburg</div>
+					</div>
+					<div class="timeline-row">
+						<div class="timeline-arrow">┃</div>
+					</div>
+					<div class="timeline-row">
+						<div class="timeline-arrow">┃</div>
+						<div class="timeline-cell">2023</div>
+					</div>
+					<div class="timeline-row">
+						<div class="timeline-arrow">┣</div>
+						<div class="timeline-cell"><a href="https://redshift.mathi.uni-heidelberg.de/">Algebraic K-Theory and Redshift</a>, Fall School, Mainz</div>
+					</div>
+					<div class="timeline-row">
+						<div class="timeline-arrow">┣</div>
+						<div class="timeline-cell"><a href="https://sfb-higher-invariants.app.uni-regensburg.de/index.php/SFB_transchromatic_2020">Transatlantic Transchromatic Homotopy Theory Conference II</a>,</div>
+					</div>
+					<div class="timeline-row">
+						<div class="timeline-arrow">┃</div>
+						<div class="timeline-cell">Regensburg</div>
+					</div>
+					<div class="timeline-row">
+						<div class="timeline-arrow">┣</div>
+						<div class="timeline-cell"><a href="https://ytm2023.epfl.ch/">Young Topologists Meeting</a>, Lausanne</div>
+					</div>
+					<div class="timeline-row">
+						<div class="timeline-arrow">┃</div>
+					</div>
+					<div class="timeline-row">
+						<div class="timeline-arrow">┃</div>
+						<div class="timeline-cell">2022</div>
+					</div>
+					<div class="timeline-row">
+						<div class="timeline-arrow">┣</div>
+						<div class="timeline-cell"><a href="https://www.math.ku.dk/english/calendar/events/ytm2022/">Young Topologists Meeting</a>, Copenhagen</div>
+					</div>
+				</div>
+			</div>
+			<div id="Publications">
+				<h3>Publications</h3>
 
-			Other notes
-			<ul>
-				<li>Short Exact Sequences</li>
-				<li>Chain Complexes</li>
-				<li>Operads</li>
-				<li>Vector Bundles</li>
-			</ul>
-		</div>
-		<div id="interests">
-			<h2 style="text-align: center;">Activities</h2>
-			<h3>Where we might have met</h3>
-			<ul>
-				<li>2024 Conference - Young Topologists Meeting, Münster</li>
-				<li>2024 Summer School - European Talbot Workshop on Operads</li>
-				<li>2024 Summer School - Equivariant Homotopy Theory, Regensburg</li>
-				<li>2023 Summer School - Algebraic K-Theory and Redshift, Mainz</li>
-				<li>2023 Conference - Transatlantic Transchromatic Homotopy Theory, Regensburg</li>
-				<li>2023 Conference - Young Topologists Meeting, Lausanne</li>
-				<li>2022 Conference - Young Topologists Meeting, Copenhagen</li>
-			</ul>
-			<h3>Other Activities</h3>
-			<table>
-				<tr>
-					<td>
-						<a href="https://math.stackexchange.com/users/598157/jonas-linssen"><img src="mathse-logo.png" height="30" width="auto"></a>
-					</td>
-					<td style="vertical-align: center;">
-						I am an active member of the <i>math.stackexchange</i> community. You find my profile <a href="https://math.stackexchange.com/users/598157/jonas-linssen">here</a>.
-					</td>
-				</tr>
-			</table>
-		</div>
-		<div id="questions">
-			<h2 style="text-align: center;">Some Questions</h2>
-			<ul>
-				<li>
-					Let $T$ be a monad on some category $\mathcal{C}$. Under which conditions on $T$ and $\mathcal{C}$ does the free functor $F:\mathcal{C} \rightarrow T\operatorname{-Alg}$ satisfy IBN (invariant basis number)? In other words, when does it reflect isomorphism type in the sense that $FX \cong FY$ implies $X \cong Y$? Note that we do <u>not</u> ask the isomorphism of algebras to be induced by a morphism of objects, hence the question is different from asking whether $F$ is conservative or an isofibration.
-				</li>
-				<li>
-					Let $T$ be a monad on some category $\mathcal{C}$. When does the category of algebras $T\operatorname{-Alg}$ have the Nielsen-Schreier property in that subalgebras of free algebras are free? A probably weaker question is: When is the essential image of the free functor closed under retracts?
-				</li>
-			</ul>
+				I have not published anything yet.
+			</div>
+
+			<div id="notes">
+				<h3>Mathematical Writing</h3>
+
+				All of the following notes are unpublished and I take full credit for any mistakes they may contain. I will be very happy about constructive feedback via my email adress above.
+				<ul>
+					<li>
+						<a href="docs/ses.pdf">Short Exact Sequences</a><br>
+						An introduction to short exact sequences for first year students.
+					</li>
+					<li>
+						<a href="docs/cplxfundamental.pdf">A Complex Analytic Proof of $\pi_1(\Bbb S^1)=\Bbb Z$</a><br>
+						Computing the fundamental group of the circle via elementary complex analysis. The notes are self-contained and should be accessible to every second year student.
+					</li>
+				</ul>
+			</div>
+			<div id="questions">
+				<h3>Questions</h3>
+
+				As every mathematician I have questions...
+				<ul>
+					<li>
+						Let $T$ be a monad on some category $\mathcal{C}$. Under which conditions on $T$ and $\mathcal{C}$ does the free functor $F:\mathcal{C} \rightarrow T\operatorname{-Alg}$ satisfy IBN (invariant basis number)? In other words, when does it reflect isomorphism type in the sense that $FX \cong FY$ implies $X \cong Y$? Note that we do <u>not</u> ask the isomorphism of algebras to be induced by a morphism of $\mathcal{C}$, hence the question is different from asking whether $F$ is conservative or an isofibration. It may be rephrased as: when does $F$ induce a full functor between the cores?
+					</li>
+					<li>
+						Let $T$ be a monad on some category $\mathcal{C}$. When does the category of algebras $T\operatorname{-Alg}$ have the Nielsen-Schreier property in that subalgebras of free algebras are free? A probably weaker question is: When is the essential image of the free functor closed under retracts?
+					</li>
+				</ul>
+			</div>
 		</div>
 	</div>
 </body>

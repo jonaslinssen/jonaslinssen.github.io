@@ -1,132 +1,133 @@
 body{
 	background-color: #DDD;
 
-	font-family: 'Open Sans', sans-serif;
-	font-size: 10pt;
+	font-family: 'Courier Prime Regular', monospace;
+	font-size: 16px;/*min(calc(1vmin + 1vmax),100px);*/
+}
+
+/*@media screen and (min-width:1000px){
+	body{
+		font-size: 16px;
+	}
+}*/
+
+a{
+	text-decoration: none;
+	color: #007700;
+}
+
+hr{
+	height: 1.5px;
+	background-color: #AAA;
+	border: none;
+	margin-bottom: 5px;
+}
+
+h3{
+	font-size: 20px;
+	text-align: center;
 }
 
 #wrapper{
-	width: 790px;
+	width: 600px;
 	margin: auto;
-	padding: 50px;
-	box-sizing: border-box;
+	padding: 40px;
+	/*box-sizing: border-box;*/
 
 	background-color: white;
 	overflow: hidden;
+
+	box-shadow: 5px 5px 5px lightgray;
 }
 
 #card{
-	width: 550px;
-	box-sizing: border-box;
-	margin: auto; /*horizontally centered*/
-	overflow: hidden;
-	border-style: solid;
+	text-align: center;
 }
 
-#card-text{
-	width: 380px;
-	height: 216px;
-	box-sizing: border-box;
+#contact{
+	margin-bottom: 1em;
+}
 
-	display: block;
-	float: left;
-	padding: 8pt;
-
-	/*background-color: red;*/
-
+#about{
+	padding-top: 1em;
 	text-align: justify;
 }
 
-#card-contacts{
-	margin-top: -10pt;
-	margin-bottom: 10pt;
-
-	color: #444;
-	font-weight: 600;
-}
-
-#card-imgdiv{
-	box-sizing: border-box;
+#navbar{
 	display: block;
-	float: left;
-	width: 160px;
-	height: 216px;
-
-	/*background-color: blue;*/
+	padding-bottom: 1em;
+	padding-top:1em;
+	margin-top: 2em;
+	
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
 }
 
-#card-img{
-	width: 150px;
-	height: auto;
+#timelines{
 
-	margin-left: 8px;
-  	position: relative;
-  	top: 50%;
-  	-webkit-transform: translateY(-50%);
-  	-ms-transform: translateY(-50%);
-  	transform: translateY(-50%);
 }
 
 #CV{
-	margin-top: 40px;
 
+}
+
+#Teaching{
+
+}
+
+#Conferences{
 	text-align: center;
 }
 
-.cvtbl{
-	text-align: left;
-	margin: auto;
-	width: fit-content;
-}
-
-.cvrow{
-	display: table-row;
-	line-height: 14pt;
-}
-
-.cvcell-edu{
-	display: table-cell;
-
-	text-align: right;
-}
-
-.cvcell-sem{
-	display: table-cell;
-	width: fit-content;
-
-	padding-left: 5pt;
-	padding-right: 2pt;
-
-	text-align: right;
-	font-family: monospace;
-}
-
-.cvcell-sep{
-	display: table-cell;
-	width: fit-content;
-
-	padding-left: 3pt;
-	padding-right: 3pt;
-
+#Publications{
+	margin-top: 3em;
 	text-align: center;
-	font-size: 15pt;
-}
-
-.cvcell-job{
-	display: table-cell;
-
-	padding-left: 3pt;
-}
-
-
-#pub{
-	margin-top: 40px;
 }
 
 #notes{
-	margin-top: 40px;
+	margin-top: 3em;
+	text-align: justify;
 }
 
-#interests{
-	margin-top: 40px;
+#questions{
+	text-align: justify;
+	margin-top: 3em;
+}
+
+
+.btn{
+	display: inline-block;
+}
+
+.btn:hover{
+	color: darkgray;
+}
+
+
+
+.timeline{
+	margin: auto;
+	display: table;
+}
+
+.timeline-row{
+	display: table-row;
+}
+
+.timeline-arrow{
+	display: table-cell;
+	padding-right: 8px;
+	font-size: 14pt;
+}
+
+.timeline-semester{
+	display: table-cell;
+	text-align: left;
+}
+
+.timeline-cell{
+	display: table-cell;
+	padding-left: 8px;
+	text-align: left;
 }
