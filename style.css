@@ -2,6 +2,7 @@ body{
 	background-color: #DDD;
 
 	font-family: 'Courier Prime Regular', monospace;
+	/*font-family: 'Verdana', sans-serif;*/
 	font-size: 16px;/*min(calc(1vmin + 1vmax),100px);*/  
 	font-size-adjust: none;
 	text-size-adjust: none;
