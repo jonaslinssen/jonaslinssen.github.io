@@ -1,5 +1,5 @@
 body{
-	background-color: #DDD;
+	/*background-color: #DDD;*/
 
 	font-family: 'Courier Prime Regular', monospace;
 	/*font-family: 'Verdana', sans-serif;*/
@@ -43,10 +43,10 @@ li{
 	padding: 40px;
 	/*box-sizing: border-box;*/
 
-	background-color: white;
+	/*background-color: white;
 	overflow: hidden;
 
-	box-shadow: 5px 5px 5px lightgray;
+	box-shadow: 5px 5px 5px lightgray;*/
 }
 
 #card{
